@@ -3,7 +3,7 @@
 for i in images/*.jpg
 do
 if [ ! -f images/thumbnails/${i#"images/"} ]; then
-	convert $i -geometry x200 images/thumbnails/${i#"images/"}
+	convert $i -geometry x400 images/thumbnails/${i#"images/"}
 	convert $i -geometry x1080 images/smaller/${i#"images/"}
 	read -p "Caption for ${i#"images"}:" caption
 
